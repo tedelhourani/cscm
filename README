@@ -19,4 +19,4 @@ docker exec cscm main "(patsubst %.c,%.o,x.c.c bar.c)"
 
 * NEXT TODO:
    - verify exactly 1 expression has been provided in main
-   - implement the syntax checker (or whatever that is called)
+   - implement the syntax checker
