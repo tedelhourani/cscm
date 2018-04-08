@@ -1,0 +1,22 @@
+* How to build container
+docker build -t cscm .
+
+* How to run dev/prod container
+docker run -v "$PWD":/usr/src/cscm --privileged -it --rm --name cscm cscm
+or
+docker run -v "$PWD":/usr/src/cscm --privileged -it --rm --name cscm cscm
+
+* How to compile and clean
+make; make clean
+or
+docker exec cscm make 
+docker exec cscm make clean
+
+* How to run
+./main "expression"
+or from the host
+docker exec cscm main "(patsubst %.c,%.o,x.c.c bar.c)"
+
+* NEXT TODO:
+   - verify exactly 1 expression has been provided in main
+   - implement the syntax checker (or whatever that is called)
