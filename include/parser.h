@@ -7,6 +7,7 @@ typedef struct token
     struct token * next;
 } token_t;
 
-token_t * tokenize(char * input);
+token_t * tokenize(char *);
+int free_tokens(token_t *);
 
 #endif // PARSER_H_

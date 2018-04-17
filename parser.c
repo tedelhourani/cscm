@@ -83,3 +83,16 @@ token_t * tokenize(char * input)
     return head_token;
 }
 
+int free_tokens(token_t * head_token)
+{
+    token_t * temp;
+    
+    while(head_token != NULL){
+	temp = head_token;
+    	head_token = head_token->next;
+	free(temp->val);
+	free(temp);
+    }
+
+    return 0;
+}
