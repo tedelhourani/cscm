@@ -4,7 +4,7 @@ docker build -t cscm .
 * How to run dev/prod container
 docker run -v "$PWD":/usr/src/cscm --privileged -it --rm --name cscm cscm
 or
-docker run -v "$PWD":/usr/src/cscm --privileged -it --rm --name cscm cscm
+docker run -v "$PWD":/usr/src/cscm --privileged -id --rm --name cscm cscm
 
 * How to compile and clean
 make; make clean
