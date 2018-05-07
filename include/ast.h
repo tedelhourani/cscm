@@ -4,6 +4,8 @@
 #include "parser.h"
 #include <stdbool.h>
 
+#define SIBLING "_SIBLING"
+
 typedef struct ast
 {
     struct ast * first_child;

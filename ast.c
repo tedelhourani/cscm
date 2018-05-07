@@ -15,9 +15,9 @@ token_t * expression(ast_t * node, token_t * token)
 		    {
 			ast_t * list_expression = malloc(sizeof(ast_t));
 			list_expression->list_expression = true;
-			list_expression->val = malloc( strlen(node->val) + strlen("_SIBLING") + 1 );
+			list_expression->val = malloc( strlen(node->val) + strlen(SIBLING) + 1 );
 			strcpy(list_expression->val, node->val);
-			strcat(list_expression->val, "_SIBLING");
+			strcat(list_expression->val, SIBLING);
 			#ifdef DEBUG
 			printf("New list expression %s sibling of %s\n", list_expression->val, node->val);
 			#endif
