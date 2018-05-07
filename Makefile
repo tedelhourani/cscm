@@ -1,16 +1,16 @@
 IDIR =./include
 CC=cc
-CFLAGS=-I$(IDIR)
+CFLAGS=-I$(IDIR) -g
 
 ODIR=./obj
 LDIR =./lib
 
 LIBS=-lm
 
-_DEPS = parser.h
+_DEPS = parser.h ast.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o parser.o
+_OBJ = main.o parser.o ast.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
